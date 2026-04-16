@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/header_gradient"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvDetailTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Назва команди"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚽ Склад команди"
+            android:textSize="12sp"
+            android:textColor="#E0E0E0"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/group_border"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 ДОДАТИ ГРАВЦЯ"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <EditText
+                android:id="@+id/etPlayerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Прізвище гравця"
+                android:inputType="textCapWords"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/etPlayerNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="№"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/spinner_border"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnAddPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕ Додати в склад"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#2E7D32"
+        android:padding="10dp"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:text="Гравець"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="№"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Позиція"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"
+        android:background="@android:color/white"/>
+
+</LinearLayout>
